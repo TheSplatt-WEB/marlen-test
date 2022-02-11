@@ -367,10 +367,12 @@ button:active {
 }
 
 .wrapper {
-  height: 100%;
+  min-height: 100%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   background-color: var(--white);
+  overflow-x: hidden;
 }
 
 .sr-only {
@@ -664,10 +666,10 @@ button:active {
   max-width: 900px;
   width: 100%;
   height: calc(100% + 160px);
-  -o-object-fit: contain;
-     object-fit: contain;
-  -o-object-position: bottom center;
-     object-position: bottom center;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: bottom right;
+     object-position: bottom right;
 }
 
 .hero-carousel__management {
@@ -850,7 +852,6 @@ button:active {
   padding-top: 85px;
   pointer-events: none;
   opacity: 0;
-  overflow-x: hidden;
 }
 
 .menu--active {
