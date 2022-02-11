@@ -7,11 +7,11 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Marlen | Главная страница</title>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20220211201435">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220212015955">
 </head>
 
 <body>
-	<div class="wrapper">
+	<div class="wrapper" id="wrapper">
 		<header class="header">
 	<div class="header__container container">
 		<nav class="header__nav">
@@ -84,10 +84,10 @@
 </header>
 
 		<main class="main">
-			<h1 class="sr-only"></h1>
+			<h1 class="sr-only">Торговый дом Marlen</h1>
 
 			<section class="hero-carousel swiper">
-	<h2 class="sr-only"></h2>
+	<h2 class="sr-only">Основные типы деятельности</h2>
 
 	<ul class="hero-carousel__slider swiper-wrapper">
 		<li class="hero-carousel__item swiper-slide">
@@ -135,7 +135,7 @@
 		</div>
 	</div>
 </section>
-			<section class="benefits">
+			<section class="benefits section">
 	<div class="benefits__container container">
 		<h2 class="benefits__title title">Наши преимущества</h2>
 
@@ -172,7 +172,7 @@
 		</ul>
 	</div>
 </section>
-			<section class="about">
+			<section class="about section">
 	<div class="about__image-box">
 		<div class="about__image" style="background-image: url('images/about/about-bg.png');"></div>
 	</div>
@@ -195,7 +195,73 @@
 		</div>
 	</div>
 </section>
-			
+			<section class="indicators section">
+	<div class="indicators__container container">
+		<h2 class="sr-only">Показатели преимуществ компании</h2>
+
+		<ul class="indicators__inner">
+			<li class="indicators__item">
+				<span class="indicators__number">6</span>
+				<p class="indicators__text">филиалов в ДВФО</p>
+			</li>
+			<li class="indicators__item">
+				<span class="indicators__number">40 000+</span>
+				<p class="indicators__text">паллетомест</p>
+			</li>
+			<li class="indicators__item">
+				<span class="indicators__number">300+</span>
+				<p class="indicators__text">торговых представителей</p>
+			</li>
+			<li class="indicators__item">
+				<span class="indicators__number">1000+</span>
+				<p class="indicators__text">сотрудников в штате</p>
+			</li>
+			<li class="indicators__item">
+				<span class="indicators__number">100+</span>
+				<p class="indicators__text">собственных грузовых авто</p>
+			</li>
+			<li class="indicators__item">
+				<span class="indicators__number">40 000+</span>
+				<p class="indicators__text">м² складских помещений</p>
+			</li>
+		</ul>
+	</div>
+</section>
+			<section class="in-branch section">
+	<div class="in-branch__container container">
+		<h2 class="in-branch__title title">В каждом филиале</h2>
+
+		<ul class="in-branch__inner">
+			<li class="in-branch__item">
+				<div class="in-branch__image-box">
+					<picture><source srcset="images/in-branch/auto-park.webp" type="image/webp"><img class="in-branch__img" src="images/in-branch/auto-park.jpg" alt=""></picture>
+				</div>
+				<p class="in-branch__text">Собственные автопарки</p>
+			</li>
+
+			<li class="in-branch__item">
+				<div class="in-branch__image-box">
+					<picture><source srcset="images/in-branch/clients.webp" type="image/webp"><img class="in-branch__img" src="images/in-branch/clients.jpg" alt=""></picture>
+				</div>
+				<p class="in-branch__text">Большая клиентская база</p>
+			</li>
+
+			<li class="in-branch__item">
+				<div class="in-branch__image-box">
+					<picture><source srcset="images/in-branch/road.webp" type="image/webp"><img class="in-branch__img" src="images/in-branch/road.png" alt=""></picture>
+				</div>
+				<p class="in-branch__text">Подъездные пути</p>
+			</li>
+
+			<li class="in-branch__item">
+				<div class="in-branch__image-box">
+					<picture><source srcset="images/in-branch/warehouse.webp" type="image/webp"><img class="in-branch__img" src="images/in-branch/warehouse.png" alt=""></picture>
+				</div>
+				<p class="in-branch__text">Склады с разными условиями хранения</p>
+			</li>
+		</ul>
+	</div>
+</section>
 		</main>
 
 		<footer class="footer">
@@ -404,9 +470,12 @@
 		</div>
 	</div>
 </div>
+		<a class="btn-to-top" href="#wrapper">
+	<span class="sr-only">Кнопка наверх</span>
+</a>
 	</div>
 
-	<script src="js/script.min.js?_v=20220211201435" type="module"></script>
+	<script src="js/script.min.js?_v=20220212015955" type="module"></script>
 </body>
 
 </html>
