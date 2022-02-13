@@ -1252,26 +1252,89 @@ button:active {
   text-transform: uppercase;
 }
 
+.brands {
+  margin-bottom: 190px;
+}
+
+.brands__title {
+  font-size: 48px;
+  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 1.22;
+  margin-bottom: 33px;
+}
+
+.brands__buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 50px;
+}
+
+.brands__btn {
+  width: 32px;
+  height: 64px;
+  position: relative;
+}
+
+.brands__btn::before {
+  content: "";
+  background-color: var(--red);
+  width: 32px;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.brands__btn--prev {
+  margin-right: 33px;
+}
+
+.brands__btn--prev::before {
+  -webkit-mask: url("../images/sprite.svg#arrow-left") center/cover no-repeat;
+          mask: url("../images/sprite.svg#arrow-left") center/cover no-repeat;
+}
+
+.brands__btn--next::before {
+  -webkit-mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
+          mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
+}
+
+.brands__btn-text {
+  font-size: 14px;
+  line-height: 1.2;
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: 0;
+}
+
 .brands__item {
   margin-bottom: 50px;
 }
 
-.brands-slide__wrapper {
-  display: flex;
+.brands-slider {
+  display: none;
   flex-wrap: wrap;
+  height: 450px;
 }
 
-.brands-slide__item {
+.brands-slider.active {
+  display: flex;
+}
+
+.brands-slider__item {
   flex: 1 0 245px;
   height: 147px;
   display: flex;
+  padding: 24px;
   align-items: center;
   justify-content: center;
   border-top: 1px solid var(--gray-600);
   border-right: 1px solid var(--gray-600);
 }
 
-.brands-slide__img {
+.brands-slider__img {
   display: block;
 }
 
@@ -1699,6 +1762,22 @@ button:active {
 
   .footer__privacy {
     margin-right: calc(20px + 71 * ((100vw - 375px) / 1545));
+  }
+
+  .brands {
+    margin-bottom: calc(80px + 110 * ((100vw - 375px) / 1545));
+  }
+
+  .brands__title {
+    font-size: calc(18px + 30 * ((100vw - 375px) / 1545));
+  }
+
+  .brands__title {
+    margin-bottom: calc(82px + -49 * ((100vw - 375px) / 1545));
+  }
+
+  .brands__buttons {
+    margin-bottom: calc(14px + 36 * ((100vw - 375px) / 1545));
   }
 
   .benefits {
@@ -2226,6 +2305,10 @@ button:active {
     margin-bottom: 0;
   }
 
+  .brands-slider__item {
+    flex: 1 0 180px;
+  }
+
   .hero-carousel {
     background-color: var(--white);
     height: auto;
@@ -2407,6 +2490,38 @@ button:active {
 
   .footer__bottom {
     font-size: 12px;
+  }
+
+  .brands__btn {
+    width: 14px;
+    height: 29px;
+  }
+
+  .brands__btn::before {
+    width: 14px;
+  }
+
+  .brands__btn--prev {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .brands__btn--next {
+    padding-left: 73px;
+  }
+
+  .brands-slider {
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .brands-slider__item {
+    flex: none;
+    width: 50%;
+  }
+
+  .brands-slider__item:nth-child(even) {
+    border-right: none;
   }
 
   .about__image-box {
