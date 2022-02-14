@@ -1368,6 +1368,21 @@ button:active {
 
 .hero-carousel__note {
   margin-bottom: 31px;
+  position: relative;
+  display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  overflow: hidden;
+}
+
+.hero-carousel__note-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: var(--red);
 }
 
 .hero-carousel__descr {
@@ -1686,6 +1701,12 @@ button:active {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+@media (min-width: 575.98px) {
+  .brands__btn-text {
+    display: none;
+  }
 }
 
 @media (min-width: 767.98px) {
