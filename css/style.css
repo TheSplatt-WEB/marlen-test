@@ -553,6 +553,29 @@ button:active {
   margin-bottom: 56px;
 }
 
+.form-box__item {
+  position: relative;
+}
+
+.form-box__item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  left: -50px;
+  width: 36px;
+  height: 66px;
+  -webkit-mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
+          mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
+  background-color: var(--gray-600);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.form-box__item--active::before {
+  opacity: 1;
+}
+
 .form-box__input {
   display: block;
   width: 100%;
@@ -579,6 +602,32 @@ button:active {
   color: var(--gray-600);
   font-size: 24px;
   line-height: 1.2;
+}
+
+.form-box__input--invalid {
+  border-color: var(--red);
+  color: var(--red);
+}
+
+.form-box__input--invalid::-moz-placeholder {
+  color: var(--red);
+}
+
+.form-box__input--invalid:-ms-input-placeholder {
+  color: var(--red);
+}
+
+.form-box__input--invalid::placeholder {
+  color: var(--red);
+}
+
+.form-box__error {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: -20px;
+  color: var(--red);
+  font-size: 12px;
 }
 
 .form-box__agreement {
@@ -1512,8 +1561,8 @@ button:active {
 }
 
 .about__image {
-  height: calc(100% + 100px);
-  width: calc(100% + 100px);
+  height: calc(100% + 130px);
+  width: calc(100% + 130px);
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: 70% bottom;
@@ -2064,6 +2113,14 @@ button:active {
 
   .form-box__inner {
     margin-bottom: 30px;
+  }
+
+  .form-box__item::before {
+    display: none;
+  }
+
+  .form-box__input {
+    padding-left: 0;
   }
 
   .form-box__btn {
