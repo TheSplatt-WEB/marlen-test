@@ -1619,15 +1619,15 @@ input:focus-visible {
 }
 
 .about__image {
-  height: calc(100% + 150px);
-  width: calc(100% + 150px);
+  height: 120%;
+  width: 100%;
   background-repeat: no-repeat;
-  background-size: 100%;
-  background-position: 70% bottom;
+  background-size: contain;
+  background-position: 75% bottom;
   z-index: 1;
   position: absolute;
   top: 0;
-  left: -140px;
+  left: 0;
 }
 
 .about__wrapper {
@@ -2052,6 +2052,11 @@ input:focus-visible {
     background-position: left -80px top 100px;
   }
 
+  .about__image {
+    background-size: cover;
+    background-position: 70% top;
+  }
+
   .why-us__wrapper {
     margin-left: -15px;
   }
@@ -2095,6 +2100,11 @@ input:focus-visible {
     font-size: 18px;
     padding-top: 35px;
     padding-bottom: 15px;
+  }
+
+  .about__image {
+    background-size: 150%;
+    background-position: left 75% bottom 20%;
   }
 
   .in-branch__inner {
@@ -2559,8 +2569,7 @@ input:focus-visible {
   }
 
   .about__image {
-    background-position: top center;
-    top: 50px;
+    background-position: 75% top;
   }
 
   .about__wrapper {
@@ -2667,10 +2676,6 @@ input:focus-visible {
 
   .about__image-box {
     height: 300px;
-  }
-
-  .about__image {
-    background-position: bottom right;
   }
 
   .indicators {
