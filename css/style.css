@@ -1076,7 +1076,8 @@ input:focus-visible {
 
 .section-form__inner {
   height: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
+  padding: 0 50px;
   width: 100%;
   margin: 0 auto;
 }
@@ -1443,6 +1444,66 @@ input:focus-visible {
 
 .brands-slider__img {
   display: block;
+}
+
+.message-complete {
+  position: fixed;
+  right: -100%;
+  bottom: 59px;
+  z-index: 9999;
+  background-color: var(--gray-400);
+  padding: 66px 41px 46px 45px;
+  display: flex;
+  align-items: center;
+  opacity: 0;
+  transition: right 0.5s ease-in, opacity 0.5s ease-in;
+}
+
+.message-complete--active {
+  opacity: 1;
+  right: 0;
+}
+
+.message-complete::before {
+  content: "";
+  width: 82px;
+  height: 54px;
+  -webkit-mask: url("../images/sprite.svg#check") center/cover no-repeat;
+          mask: url("../images/sprite.svg#check") center/cover no-repeat;
+  background-color: var(--gray-600);
+  margin-right: 51px;
+}
+
+.message-complete__text {
+  font-size: 16px;
+  margin-right: 39px;
+}
+
+.message-complete__btn {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  --bg-color: var(--gray-600);
+}
+
+.message-complete__btn::before,
+.message-complete__btn::after {
+  content: "";
+  position: absolute;
+  top: calc(50% - 2px);
+  left: 0;
+  width: 25px;
+  height: 4px;
+  background-color: var(--bg-color);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.message-complete__btn::before {
+  transform: rotate(45deg);
+}
+
+.message-complete__btn::after {
+  transform: rotate(-45deg);
 }
 
 .hero-carousel {
@@ -1915,6 +1976,10 @@ input:focus-visible {
     margin-bottom: calc(14px + 36 * ((100vw - 375px) / 1545));
   }
 
+  .message-complete__text {
+    font-size: calc(12px + 4 * ((100vw - 375px) / 1545));
+  }
+
   .benefits {
     padding-top: calc(80px + 107 * ((100vw - 375px) / 1545));
   }
@@ -2027,12 +2092,19 @@ input:focus-visible {
   }
 
   .form-box__form {
-    padding-left: 80px;
-    max-width: 496px;
+    padding-left: 50px;
   }
 
   .header__list {
     display: none;
+  }
+
+  .section-form__inner {
+    padding: 0;
+  }
+
+  .section-form__column {
+    align-items: center;
   }
 
   .menu__list {
@@ -2464,6 +2536,10 @@ input:focus-visible {
     flex: 1 0 180px;
   }
 
+  .message-complete {
+    padding: 35px 20px;
+  }
+
   .hero-carousel {
     background-color: var(--white);
     height: auto;
@@ -2672,6 +2748,14 @@ input:focus-visible {
 
   .brands-slider__item:nth-child(even) {
     border-right: none;
+  }
+
+  .message-complete::before {
+    display: none;
+  }
+
+  .message-complete__text {
+    margin-right: 25px;
   }
 
   .about__image-box {
@@ -2945,6 +3029,10 @@ input:focus-visible {
 
   .brands__btn:hover::before {
     background-color: var(--gray-600);
+  }
+
+  .message-complete__btn:hover {
+    --bg-color: var(--red);
   }
 
   .hero-carousel__arrow {
