@@ -341,8 +341,6 @@ body {
   font-weight: 300;
   line-height: 1.5;
   color: var(--gray-600);
-  overflow-x: hidden;
-  overflow-y: scroll;
   position: relative;
 }
 
@@ -358,9 +356,10 @@ body *::selection {
 
 body.lock {
   overflow: hidden;
+  overflow-y: scroll;
 }
 
-.viewport {
+.viewport.lock {
   overflow: hidden;
   position: fixed;
   height: 100%;
