@@ -1075,12 +1075,11 @@ input:focus-visible {
   background-color: var(--gray-600);
 }
 
-.section-form__container {
-  max-width: 1400px;
-}
-
 .section-form__inner {
   height: 100%;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 .section-form__column {
