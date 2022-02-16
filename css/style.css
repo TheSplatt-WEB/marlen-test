@@ -767,6 +767,10 @@ input:focus-visible {
   margin-bottom: 37px;
 }
 
+.hero-page__text p:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .popup {
   position: fixed;
   top: 0;
@@ -777,8 +781,7 @@ input:focus-visible {
   padding-top: 85px;
   pointer-events: none;
   opacity: 0;
-  height: 100vh;
-  overflow-y: auto;
+  height: 100%;
 }
 
 .popup--active {
@@ -2055,8 +2058,7 @@ input:focus-visible {
   z-index: 9999;
   width: 100vw;
   background-color: var(--gray);
-  height: 100vh;
-  overflow-y: auto;
+  height: 100%;
   pointer-events: none;
   opacity: 0;
 }
@@ -2786,7 +2788,13 @@ input:focus-visible {
     width: 100%;
   }
 
+  .hero-page__text p:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
   .popup {
+    overflow-x: hidden;
+    overflow-y: auto;
     padding-top: 100px;
   }
 
@@ -2976,6 +2984,7 @@ input:focus-visible {
   }
 
   .menu {
+    overflow-x: hidden;
     overflow-y: auto;
     padding-top: 66px;
   }
@@ -3255,6 +3264,8 @@ input:focus-visible {
   }
 
   .popup-slider {
+    overflow-x: hidden;
+    overflow-y: auto;
     z-index: 9998;
     padding-top: 66px;
   }
@@ -3701,10 +3712,6 @@ input:focus-visible {
 }
 
 @media (max-height: 575.98px) {
-  .popup {
-    overflow-y: auto;
-  }
-
   .hero-carousel__info {
     padding-bottom: 50px;
   }
