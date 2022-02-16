@@ -3323,6 +3323,10 @@ input:focus-visible {
   .popup-slider__btn--next::after {
     display: none;
   }
+
+  .popup-slider__close {
+    display: none;
+  }
 }
 
 @media (max-width: 575.98px) {
