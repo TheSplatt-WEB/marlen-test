@@ -506,6 +506,7 @@ input:focus-visible {
   padding: 4px;
   display: flex;
   align-items: flex-end;
+  flex-wrap: wrap;
 }
 
 .info-address__item:not(:last-child) {
@@ -517,7 +518,6 @@ input:focus-visible {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
-  line-height: 2;
 }
 
 .info-address__text {
@@ -1363,7 +1363,7 @@ input:focus-visible {
 
 .menu__address .info-address__text--title {
   font-size: 24px;
-  line-height: 1.22;
+  line-height: 1;
   text-transform: uppercase;
 }
 
@@ -2063,6 +2063,7 @@ input:focus-visible {
 @media (max-width: 1300px) {
   .info-address__item {
     padding-left: 21px;
+    display: block;
   }
 
   .info-address__link {
