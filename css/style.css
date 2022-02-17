@@ -1949,10 +1949,6 @@ input:focus-visible {
 }
 
 .why-us-buyers__icon {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: left center;
-  display: block;
   width: 100%;
   height: 100%;
 }
@@ -2256,6 +2252,25 @@ input:focus-visible {
   margin-bottom: 190px;
 }
 
+.history--logistics {
+  background-color: var(--gray-300);
+  margin-top: 80px;
+  padding-bottom: 162px;
+}
+
+.history--logistics .history__item {
+  overflow: hidden;
+  --padding-top: 30px;
+}
+
+.history--logistics .history__item:not(:last-child) {
+  margin-bottom: 55px;
+}
+
+.history--logistics .history__title {
+  max-width: 260px;
+}
+
 .history__container {
   display: flex;
 }
@@ -2271,8 +2286,14 @@ input:focus-visible {
   --padding-top: 20px;
 }
 
-.history__item:nth-child(even) {
+.history__item:not(:first-child) {
   --padding-top: 80px;
+}
+
+.history__image {
+  max-width: 370px;
+  width: 100%;
+  margin-right: 15px;
 }
 
 .history__date {
@@ -2746,6 +2767,47 @@ input:focus-visible {
   transform: rotate(-45deg);
 }
 
+.logistics {
+  margin-bottom: 125px;
+}
+
+.logistics__title {
+  margin-bottom: 64px;
+}
+
+.logistics__image {
+  height: 462px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  margin-bottom: 65px;
+}
+
+.logistics__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-left: -20px;
+  row-gap: 40px;
+}
+
+.logistics__item {
+  margin-left: 20px;
+  flex: 1 0 330px;
+  padding-top: 20px;
+  border-top: 1px solid var(--gray-600);
+  display: flex;
+  align-items: center;
+}
+
+.logistics__icon {
+  display: block;
+  height: 70px;
+  min-width: 70px;
+  width: 70px;
+  margin-right: 40px;
+}
+
 @media (min-width: 575.98px) {
   .brands__btn-text {
     display: none;
@@ -2978,6 +3040,14 @@ input:focus-visible {
     margin-bottom: calc(72px + 118 * ((100vw - 375px) / 1545));
   }
 
+  .history--logistics {
+    margin-top: calc(0px + 80 * ((100vw - 375px) / 1545));
+  }
+
+  .history--logistics {
+    padding-bottom: calc(0px + 162 * ((100vw - 375px) / 1545));
+  }
+
   .history__title {
     font-size: calc(18px + 6 * ((100vw - 375px) / 1545));
   }
@@ -3016,6 +3086,22 @@ input:focus-visible {
 
   .awards__top {
     padding-bottom: calc(35px + 16 * ((100vw - 375px) / 1545));
+  }
+
+  .logistics {
+    margin-bottom: calc(100px + 25 * ((100vw - 375px) / 1545));
+  }
+
+  .logistics__title {
+    margin-bottom: calc(35px + 29 * ((100vw - 375px) / 1545));
+  }
+
+  .logistics__image {
+    height: calc(350px + 112 * ((100vw - 375px) / 1545));
+  }
+
+  .logistics__icon {
+    margin-right: calc(20px + 20 * ((100vw - 375px) / 1545));
   }
 }
 
@@ -3293,14 +3379,22 @@ input:focus-visible {
     top: -15px;
   }
 
+  .history__item:not(:last-child) {
+    margin-bottom: 80px;
+  }
+
   .history__item:nth-child(odd) {
     background-color: var(--gray-300);
     padding: 40px 15px 54px;
-    margin-bottom: 80px;
   }
 
   .history__item {
     flex-direction: column-reverse;
+  }
+
+  .history__image {
+    padding-top: 40px;
+    margin: 0 auto;
   }
 
   .history__date {
@@ -4035,6 +4129,19 @@ input:focus-visible {
     display: none;
   }
 
+  .history--logistics {
+    background-color: transparent;
+  }
+
+  .history--logistics .history__item {
+    background-color: var(--gray-300);
+    padding: 40px 15px 54px;
+  }
+
+  .history--logistics .history__item:not(:last-child) {
+    margin-bottom: 15px;
+  }
+
   .history__date {
     font-size: 14px;
     padding-bottom: 13px;
@@ -4090,6 +4197,22 @@ input:focus-visible {
   .popup-delivery__close {
     top: 20px;
     right: 40px;
+  }
+
+  .logistics__image {
+    margin-bottom: 40px;
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+
+  .logistics__icon {
+    height: 50px;
+    width: 50px;
+    min-width: 50px;
+  }
+
+  .logistics__text {
+    font-size: 14px;
   }
 }
 
@@ -4255,6 +4378,13 @@ input:focus-visible {
     height: 100px;
   }
 
+  .history__image {
+    margin-left: -40px;
+    margin-right: -40px;
+    max-width: none;
+    width: calc(100% + 80px);
+  }
+
   .delivery__slider {
     width: calc(100% + 20px);
   }
@@ -4262,6 +4392,22 @@ input:focus-visible {
   .pay-system__decor {
     max-width: 100%;
     height: 165px;
+  }
+
+  .logistics__inner {
+    margin-right: -20px;
+  }
+
+  .logistics__item {
+    flex: none;
+    width: 100%;
+    margin-left: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .logistics__item:first-child {
+    border-top: none;
   }
 }
 
