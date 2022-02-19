@@ -2939,6 +2939,7 @@ input:focus-visible {
   -webkit-mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
           mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
   background-color: var(--color-btn);
+  transition: background-color 0.3s ease-in-out;
 }
 
 .news__btn::after {
