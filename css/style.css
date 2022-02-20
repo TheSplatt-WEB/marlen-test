@@ -2241,6 +2241,7 @@ input:focus-visible {
 
 .range-images__img {
   width: 80%;
+  margin: 0 auto;
 }
 
 .popup-slider {
