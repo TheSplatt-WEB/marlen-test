@@ -2386,10 +2386,6 @@ input:focus-visible {
   box-sizing: border-box;
 }
 
-.popup-slider__item {
-  height: 100%;
-}
-
 .popup-slider__container {
   display: flex;
   align-items: center;
@@ -2495,6 +2491,16 @@ input:focus-visible {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.popup-slider__btn-text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+  color: var(--white);
+  font-size: 14px;
+  pointer-events: none;
 }
 
 .popup-slider__close {
@@ -2954,6 +2960,7 @@ input:focus-visible {
 
 .news__item {
   display: flex;
+  position: relative;
 }
 
 .news__item:not(:last-child) .news__info {
@@ -3021,6 +3028,17 @@ input:focus-visible {
      object-fit: contain;
   -o-object-position: center;
      object-position: center;
+  margin: 0 auto;
+}
+
+.news__link {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
 }
 
 .news__title {
@@ -3036,7 +3054,7 @@ input:focus-visible {
   margin-right: 15px;
 }
 
-.news__btn {
+.news__arrow {
   display: block;
   position: absolute;
   top: calc(50% - 33px);
@@ -3050,7 +3068,7 @@ input:focus-visible {
   transition: opacity 0.5s ease-in-out;
 }
 
-.news__btn::before {
+.news__arrow::before {
   content: "";
   position: absolute;
   top: calc(50% - 33px);
@@ -3060,10 +3078,9 @@ input:focus-visible {
   -webkit-mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
           mask: url("../images/sprite.svg#arrow-right") center/cover no-repeat;
   background-color: var(--color-btn);
-  transition: background-color 0.3s ease-in-out;
 }
 
-.news__btn::after {
+.news__arrow::after {
   content: "";
   position: absolute;
   left: 0;
@@ -3075,6 +3092,14 @@ input:focus-visible {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+}
+
+.news__arrow-text {
+  position: absolute;
+  top: 50%;
+  left: 7px;
+  transform: translate(-100%, -50%);
+  font-size: 14px;
 }
 
 @media (min-width: 575.98px) {
@@ -3092,11 +3117,19 @@ input:focus-visible {
     display: none;
   }
 
+  .popup-slider__btn-text {
+    display: none;
+  }
+
   .awards__btn-text {
     display: none;
   }
 
   .news__logo-box {
+    display: none;
+  }
+
+  .news__arrow-text {
     display: none;
   }
 }
@@ -3433,7 +3466,7 @@ input:focus-visible {
     font-size: calc(18px + 6 * ((100vw - 375px) / 1545));
   }
 
-  .news__btn {
+  .news__arrow {
     right: calc(-100px + 190 * ((100vw - 375px) / 1545));
   }
 }
@@ -3601,18 +3634,18 @@ input:focus-visible {
     padding-right: 60px;
   }
 
-  .news__btn {
+  .news__arrow {
     padding-left: 40px;
     right: 10px;
   }
 
-  .news__btn::before {
+  .news__arrow::before {
     width: 15px;
     height: 33px;
     top: calc(50% - 17px);
   }
 
-  .news__btn::after {
+  .news__arrow::after {
     width: 22px;
     height: 62px;
     top: 2px;
@@ -3758,7 +3791,6 @@ input:focus-visible {
   }
 
   .range__link {
-    align-items: flex-end;
     padding-top: 15px;
     padding-right: 0;
     padding-bottom: 15px;
@@ -4474,6 +4506,7 @@ input:focus-visible {
 
   .why-us-buyers__wrapper {
     margin-left: -15px;
+    row-gap: 15px;
   }
 
   .why-us-buyers__item {
@@ -4517,9 +4550,9 @@ input:focus-visible {
   }
 
   .popup-slider {
+    z-index: 9998;
     overflow-x: hidden;
     overflow-y: auto;
-    z-index: 9998;
     padding-top: 66px;
   }
 
@@ -4572,7 +4605,7 @@ input:focus-visible {
 
   .popup-slider__btn--next {
     right: 0;
-    padding-left: 0;
+    padding-left: 75px;
   }
 
   .popup-slider__btn--next::after {
@@ -4678,14 +4711,14 @@ input:focus-visible {
     max-width: none;
   }
 
-  .news__btn {
+  .news__arrow {
     order: 3;
     right: 0;
     top: auto;
     bottom: 64px;
   }
 
-  .news__btn::after {
+  .news__arrow::after {
     display: none;
   }
 }
@@ -5180,17 +5213,13 @@ input:focus-visible {
     --color-btn: var(--gray-300);
   }
 
-  .news__item:hover .news__btn,
+  .news__item:hover .news__arrow,
   .news__item:hover .news__img {
     opacity: 1;
   }
 
-  .news__btn {
+  .news__arrow {
     opacity: 0;
-  }
-
-  .news__btn:hover {
-    --color-btn: var(--gray-600);
   }
 }
 
@@ -5256,7 +5285,6 @@ input:focus-visible {
   }
 
   .range__link {
-    align-items: flex-end;
     padding-top: 15px;
     padding-right: 0;
     padding-bottom: 15px;
