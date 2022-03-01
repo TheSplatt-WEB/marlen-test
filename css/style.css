@@ -5184,6 +5184,10 @@ input:focus-visible {
     margin-right: 0;
     margin-bottom: 35px;
   }
+
+  .logo-full picture {
+    margin-bottom: 35px;
+  }
 }
 
 @media (any-hover: hover) {
