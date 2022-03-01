@@ -3234,19 +3234,58 @@ input:focus-visible {
   max-width: 560px;
   width: 100%;
   margin: 0 auto;
-  margin-bottom: 50px;
 }
 
-.short-box__text p:not(:last-child) {
+.short-box *:last-child {
+  margin-bottom: 21px;
+}
+
+.short-box:not(:last-child) {
+  border-bottom: 1px solid var(--gray-600);
+}
+
+.short-box__text p {
+  margin-top: 21px;
+  margin-bottom: 21px;
+}
+
+.short-box__links {
   margin-bottom: 25px;
 }
 
-.short-box__link {
+.short-box__links a {
   display: block;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  margin-left: 65px;
 }
 
-.short-box__link:not(:last-child) {
-  margin-bottom: 22px;
+.short-box__links a:first-child {
+  margin-top: 50px;
+}
+
+.short-box__links a:not(:last-child) {
+  margin-bottom: 45px;
+}
+
+.short-box__links a:last-child {
+  margin-bottom: 50px;
+}
+
+.short-box__links a::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 20px);
+  left: -65px;
+  background-image: url("../images/sprite.svg#files");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center;
+  width: 31px;
+  height: 41px;
+  margin-right: 35px;
 }
 
 @media (min-width: 575.98px) {
@@ -3639,10 +3678,6 @@ input:focus-visible {
 
   .news-page__media-box {
     margin-bottom: calc(60px + 20 * ((100vw - 375px) / 1545));
-  }
-
-  .short-box {
-    margin-bottom: calc(60px + -10 * ((100vw - 375px) / 1545));
   }
 }
 
@@ -4933,6 +4968,10 @@ input:focus-visible {
   .news-page__media-box.col-span-full {
     padding-bottom: 104.42%;
   }
+
+  .short-box {
+    font-size: 14px;
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -5445,6 +5484,25 @@ input:focus-visible {
 
   .news-page__play-btn:hover {
     --arrow-color: var(--gray-600);
+  }
+
+  .short-box__links a {
+    position: relative;
+  }
+
+  .short-box__links a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--gray-600);
+    transition: width 0.3s ease-in-out;
+  }
+
+  .short-box__links a:hover::after {
+    width: 100%;
   }
 }
 
