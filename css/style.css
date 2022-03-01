@@ -3138,7 +3138,7 @@ input:focus-visible {
   padding-bottom: 130px;
 }
 
-.news-page *:last-child {
+.news-page > *:last-child {
   margin-bottom: 0;
 }
 
@@ -3234,10 +3234,6 @@ input:focus-visible {
   max-width: 560px;
   width: 100%;
   margin: 0 auto;
-}
-
-.short-box *:last-child {
-  margin-bottom: 21px;
 }
 
 .short-box:not(:last-child) {
@@ -5182,10 +5178,6 @@ input:focus-visible {
 
   .logo-full__img {
     margin-right: 0;
-    margin-bottom: 35px;
-  }
-
-  .logo-full picture {
     margin-bottom: 35px;
   }
 }
