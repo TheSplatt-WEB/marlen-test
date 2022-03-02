@@ -3245,6 +3245,14 @@ input:focus-visible {
   margin-bottom: 21px;
 }
 
+.short-box__text a {
+  color: var(--red);
+  background-image: linear-gradient(to bottom, transparent 20%, var(--red) 21%);
+  background-position: 0 1.08em;
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+}
+
 .short-box__links {
   margin-bottom: 25px;
 }
@@ -4174,6 +4182,7 @@ input:focus-visible {
 
   .title-page__container--news-page {
     display: block;
+    padding-bottom: 15px;
   }
 
   .title-page__title--news-page {
@@ -4967,6 +4976,14 @@ input:focus-visible {
 
   .short-box {
     font-size: 14px;
+  }
+
+  .short-box__links a {
+    margin-left: 52px;
+  }
+
+  .short-box__links a::before {
+    left: -52px;
   }
 }
 
