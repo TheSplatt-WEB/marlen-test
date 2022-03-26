@@ -13,7 +13,7 @@
 
 	<title>Marlen | Главная страница</title>
 
-	<link rel="stylesheet" href="css/style.min.css?_v=20220317204601">
+	<link rel="stylesheet" href="css/style.min.css?_v=20220327042740">
 </head>
 
 <body>
@@ -299,118 +299,11 @@
 			<button class="branches__btn" type="button">Выбрать город</button>
 
 			<ul class="branches__list">
-				<li class="branches__item">
-					<button class="branches__link" type="button">
-						<span class="sr-only">Посмотреть подробнее</span>
-					</button>
 
-					<h3 class="branches__city">Биробиджан</h3>
-
-					<ul class="branches__address-list">
-						<li class="branches__address-item">
-							<span class="branches__address-link">ул. Тихонькая, 48</span>
-						</li>
-
-						<li class="branches__address-item">
-							<a class="branches__address-link" href="mailto:artyukh.a@marlen.khv.ru">artyukh.a@marlen.khv.ru</a>
-						</li>
-					</ul>
-				</li>
-
-				<li class="branches__item">
-					<button class="branches__link" type="button">
-						<span class="sr-only">Посмотреть подробнее</span>
-					</button>
-
-					<h3 class="branches__city">Хабаровск</h3>
-
-					<ul class="branches__address-list">
-						<li class="branches__address-item">
-							<span class="branches__address-link">ул. Промывочная, 13</span>
-						</li>
-
-						<li class="branches__address-item">
-							<a class="branches__address-link" href="mailto:marlentd@mail.ru">marlentd@mail.ru</a>
-						</li>
-					</ul>
-				</li>
-
-				<li class="branches__item">
-					<button class="branches__link" type="button">
-						<span class="sr-only">Посмотреть подробнее</span>
-					</button>
-
-					<h3 class="branches__city">Владивосток</h3>
-
-					<ul class="branches__address-list">
-						<li class="branches__address-item">
-							<span class="branches__address-link">ул. Командорская, 11</span>
-						</li>
-
-						<li class="branches__address-item">
-							<a class="branches__address-link" href="mailto:VlDir@marlen.khv.ru">VlDir@marlen.khv.ru</a>
-						</li>
-					</ul>
-				</li>
-
-				<li class="branches__item">
-					<button class="branches__link" type="button">
-						<span class="sr-only">Посмотреть подробнее</span>
-					</button>
-
-					<h3 class="branches__city">Комсомольск-на-Амуре</h3>
-
-					<ul class="branches__address-list">
-						<li class="branches__address-item">
-							<span class="branches__address-link">ул. Аллея Труда, 8/3д</span>
-						</li>
-
-						<li class="branches__address-item">
-							<a class="branches__address-link" href="mailto:kadrikms@yandex.ru">kadrikms@yandex.ru</a>
-						</li>
-					</ul>
-				</li>
-
-				<li class="branches__item">
-					<button class="branches__link" type="button">
-						<span class="sr-only">Посмотреть подробнее</span>
-					</button>
-
-					<h3 class="branches__city">Уссурийск</h3>
-
-					<ul class="branches__address-list">
-						<li class="branches__address-item">
-							<span class="branches__address-link">ул. Колхозная, 10</span>
-						</li>
-
-						<li class="branches__address-item">
-							<a class="branches__address-link" href="mailto:Us1@marlen.khv.ru">Us1@marlen.khv.ru</a>
-						</li>
-					</ul>
-				</li>
-
-				<li class="branches__item">
-					<button class="branches__link" type="button">
-						<span class="sr-only">Посмотреть подробнее</span>
-					</button>
-
-					<h3 class="branches__city">Находка</h3>
-
-					<ul class="branches__address-list">
-						<li class="branches__address-item">
-							<span class="branches__address-link">Ул. Шоссейная, 22</span>
-						</li>
-
-						<li class="branches__address-item">
-							<a class="branches__address-link" href="mailto:Na4@marlen.khv.ru">Na4@marlen.khv.ru</a>
-						</li>
-					</ul>
-				</li>
 			</ul>
 		</div>
 
-		<div class="branches__map-box section-trigger">
-			<iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3A846e8222e30070dfaa328e37e54c4ebc63f8838a2917959e1095047d995550c8&amp;source=constructor" width="1280" height="720" frameborder="0"></iframe>
+		<div class="branches__map-box section-trigger" id="map">
 		</div>
 	</div>
 </section>
@@ -589,12 +482,19 @@
 	</div>
 </div>
 
+		<section class="popup-branches">
+	<ul class="popup-branches__inner">
+
+	</ul>
+</section>
+
 		<a class="btn-to-top" href="#wrapper">
 	<span class="sr-only">Кнопка наверх</span>
 </a>
 	</div>
 
-	<script src="js/script.min.js?_v=20220317204601" type="module"></script>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyACVgqeZUf71M2lqsyNITnYT2AO-UugEEU&callback=initMap&_v=20220327042740"></script>
+<script src="js/script.min.js?_v=20220327042740" type="module"></script>
 </body>
 
 </html>
