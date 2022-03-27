@@ -340,11 +340,6 @@ html {
   height: 100%;
 }
 
-html.lock {
-  position: relative;
-  overflow: hidden;
-}
-
 body {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
