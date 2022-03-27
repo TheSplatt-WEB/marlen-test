@@ -340,6 +340,11 @@ html {
   height: 100%;
 }
 
+html.lock {
+  position: relative;
+  overflow: hidden;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-style: normal;
@@ -366,10 +371,6 @@ body.smooth-off {
 }
 
 body.lock {
-  overflow: hidden;
-}
-
-.viewport.lock {
   overflow: hidden;
 }
 
