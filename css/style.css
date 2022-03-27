@@ -367,6 +367,7 @@ body.smooth-off {
 
 body.lock {
   overflow: hidden;
+  height: 100vh;
 }
 
 .viewport.smooth-off {
