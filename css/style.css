@@ -2504,22 +2504,6 @@ input:focus-visible {
   width: 100%;
 }
 
-.marker.active {
-  padding: 40px 25px 25px;
-}
-
-.marker.active .marker__name {
-  margin-bottom: 27px;
-}
-
-.marker.active .marker__content {
-  display: block;
-}
-
-.marker.active .marker__list {
-  display: block;
-}
-
 .marker__name {
   font-size: 28px;
   font-weight: 600;
@@ -3478,6 +3462,22 @@ input:focus-visible {
 
   .branches__btn {
     display: none;
+  }
+
+  .marker.active {
+    padding: 40px 25px 25px;
+  }
+
+  .marker.active .marker__name {
+    margin-bottom: 27px;
+  }
+
+  .marker.active .marker__content {
+    display: block;
+  }
+
+  .marker.active .marker__list {
+    display: block;
   }
 
   .popup-slider__btn-text {
@@ -4896,7 +4896,7 @@ input:focus-visible {
   }
 
   .marker {
-    display: none !important;
+    padding: 10px 20px;
   }
 
   .why-us {
