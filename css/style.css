@@ -365,10 +365,6 @@ body.smooth-off {
   overflow-y: scroll;
 }
 
-body.lock {
-  overflow: hidden;
-}
-
 .viewport.smooth-off {
   overflow: hidden;
   position: fixed;
