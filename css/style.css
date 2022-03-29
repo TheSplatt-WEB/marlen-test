@@ -1457,6 +1457,9 @@ input:focus-visible {
   margin-left: 142px;
 }
 
+.no-webp .section-files--buyers .section-files__img {
+  background-image: url("../images/section-files/notebook.png"); }
+
 .section-files__container {
   background-color: var(--gray-300);
   overflow: hidden;
@@ -1468,6 +1471,9 @@ input:focus-visible {
   display: flex;
   position: relative;
 }
+
+.no-webp .section-files__img {
+  background-image: url("../images/section-files/notepad.png"); }
 
 .section-files__img {
   width: 650px;
@@ -4537,7 +4543,7 @@ input:focus-visible {
   }
 
   .no-webp .section-files--buyers .section-files__img {
-    background-image: url("../images/section-files/notebook-mobile.png") !important; }
+    background-image: url("../images/section-files/notebook-mobile.png"); }
 
   .section-files--buyers .section-files__img {
     background-size: contain;
@@ -5790,7 +5796,11 @@ input:focus-visible {
   }
 }
 
+.webp .section-files--buyers .section-files__img { background-image: url(../images/section-files/notebook.webp); }
+
+.webp .section-files__img { background-image: url(../images/section-files/notepad.webp); }
+
 @media (max-width: 767.98px) {
 
-  .webp .section-files--buyers .section-files__img { background-image: url(../images/section-files/notebook-mobile.webp) !important; }
+  .webp .section-files--buyers .section-files__img { background-image: url(../images/section-files/notebook-mobile.webp); }
 }
