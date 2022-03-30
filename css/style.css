@@ -2301,6 +2301,10 @@ input:focus-visible {
   padding-bottom: 150px;
 }
 
+.indicators__wrapper {
+  position: relative;
+}
+
 .indicators__inner {
   display: flex;
   flex-wrap: wrap;
@@ -2308,7 +2312,7 @@ input:focus-visible {
 
 .indicators__line {
   position: absolute;
-  top: calc(50% - 10px);
+  top: 50%;
   left: 0;
   width: 100%;
   height: 1px;
@@ -2585,6 +2589,10 @@ input:focus-visible {
   max-width: 1000px;
 }
 
+.why-us__inner {
+  position: relative;
+}
+
 .why-us__wrapper {
   display: flex;
   flex-wrap: wrap;
@@ -2594,9 +2602,9 @@ input:focus-visible {
 
 .why-us__line {
   position: absolute;
-  top: calc(50% - 10px);
-  left: 34px;
-  width: calc(100% - 34px);
+  top: 50%;
+  left: 0;
+  width: 100%;
   height: 1px;
   background-color: var(--gray-600);
 }
@@ -4005,11 +4013,6 @@ input:focus-visible {
 
   .why-us__wrapper {
     margin-left: -15px;
-  }
-
-  .why-us__line {
-    left: 15px;
-    width: calc(100% - 15px);
   }
 
   .why-us__item {
