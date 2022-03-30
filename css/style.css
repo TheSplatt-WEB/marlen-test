@@ -600,6 +600,26 @@ input:focus-visible {
 .form-box__form {
   max-width: 416px;
   width: 100%;
+  transition: opacity 0.3s;
+}
+
+.form-box__form.sending {
+  position: relative;
+  opacity: 0.5 !important;
+}
+
+.form-box__form.sending::before {
+  content: "";
+  position: absolute;
+  top: calc(50% - 25px);
+  left: calc(50% - 25px);
+  width: 50px;
+  height: 50px;
+  z-index: 2;
+  background-image: url("../images/load.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
 }
 
 .form-box__inner {
